@@ -1,0 +1,64 @@
+form{
+   
+    position:absolute;
+    top:30%;
+    left:30%;
+    width:50%;
+    height:30%;
+   
+}
+
+body{
+    background-color:black;
+    color:gold;
+}
+
+h3{
+position:relative;
+left:20%;
+color:blue
+}
+
+input{
+    width:50%;
+    height:10%
+}
+
+.name{
+    position:relative;
+    left:0
+}
+
+.message{
+    position:relative;
+    right:55%;
+    top:20%;
+    display:inline
+}
+#text{
+    position:relative;
+    left:10%;
+    top:6%
+}
+button{
+    position:relative;
+    top:150px;
+    width:130px;
+    right:70px;
+    height:40px
+}
+
+#container{
+ 
+    position:realtive;
+    
+    
+    width:50%;
+    height:100%;
+}
+#new{
+    color:red;
+    font-size:3em;
+    position: absolute;
+    left:50%
+}
