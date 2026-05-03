@@ -2,7 +2,8 @@ const express=require("express")
 const app=express()
 const path=require("node:path")
 
-app.set("views",path.join(__dirname))
+app.set("views", path.join(__dirname, "..", "views"))
+app.use(express.static(path.join(__dirname, "..", "public")))
 app.set("view engine","ejs")
 
 app.use(express.urlencoded({ extended: true })) 
@@ -19,9 +20,13 @@ const messages=[
 }
 ]
 
-app.get("/new",(req,res)=>{
-    res.render("form",{title:"Mini Message Board",messages:messages})
+app.get("/",(req,res)=>{
+    res.render("index",{title:"Mini Message Board",messages})
 })
+
+app.get("/new", (req, res) => {
+    res.render("form", { title: "Add New Message" });
+});
 
 app.post("/new",(req,res)=>{
     const { user, text } = req.body;
